@@ -14,7 +14,7 @@ module.exports = merge(commonConfig, {
   ],
   devServer: {
     hot: true, // enable HMR on the server
-    setup: (app) => {
+    before: (app) => {
       app.use('/react.development.js', express.static('node_modules/react/umd/react.development.js'))
       app.use('/react-dom.development.js', express.static('node_modules/react-dom/umd/react-dom.development.js'))
     }

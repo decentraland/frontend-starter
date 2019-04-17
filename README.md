@@ -1,6 +1,8 @@
 # Decentraland Frontend Starting Kit
 > Minimal starting kit for a front-end in TypeScript, using HMR and `decentraland-ui`
 
+![](screenshot.png)
+
 * **[React](https://facebook.github.io/react/)** (16.x)
 * **[Webpack](https://webpack.js.org/)** (4.x)
 * **[Typescript](https://www.typescriptlang.org/)** (3.x)
