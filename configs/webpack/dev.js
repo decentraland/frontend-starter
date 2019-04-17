@@ -1,5 +1,6 @@
 // development config
 const merge = require('webpack-merge');
+const express = require('express');
 const webpack = require('webpack');
 const commonConfig = require('./common');
 
@@ -13,6 +14,10 @@ module.exports = merge(commonConfig, {
   ],
   devServer: {
     hot: true, // enable HMR on the server
+    setup: (app) => {
+      app.use('/react.development.js', express.static('node_modules/react/umd/react.development.js'))
+      app.use('/react-dom.development.js', express.static('node_modules/react-dom/umd/react-dom.development.js'))
+    }
   },
   devtool: 'cheap-module-eval-source-map',
   plugins: [
